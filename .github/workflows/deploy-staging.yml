@@ -12,6 +12,10 @@ env:
   DOCKER_IMAGE_NAME: rdnath93-azure-ttt
   AZURE_WEBAPP_NAME: rdnath93-ttt-app
   ###############################################
+# Set permissions at the workflow level
+permissions:
+  contents: read    # Required to checkout the repository code
+  packages: write  # REQUIRED to push images to GitHub Container Registry (ghcr.io)
 
 jobs:
   build:
